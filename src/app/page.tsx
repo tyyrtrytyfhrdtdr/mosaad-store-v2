@@ -2,34 +2,23 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden">
+    <main className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-black text-white">
       
-      {/* صورة الخلفية */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=2000&auto=format&fit=crop"
-          alt="Cycling Background"
-          fill
-          className="object-cover opacity-30"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
-      </div>
-
       {/* المحتوى */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20 flex flex-col items-center">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
         
-        {/* اللوجو */}
-<div className="relative w-32 h-32 md:w-40 md:h-40 mb-8 rounded-full overflow-hidden border-4 border-red-600 shadow-[0_0_30px_rgba(220,38,38,0.6)] bg-black flex-shrink-0">
-   <Image 
-     src="/phoenix-logo.JPG" 
-     alt="Phoenix Logo" 
-     fill 
-     className="object-contain p-2" 
-   />
-</div>
+        {/* اللوجو - صغرناه عشان ميبوظش الشكل */}
+        <div className="relative w-48 h-48 md:w-64 md:h-64 mb-8">
+           <Image 
+             src="/phoenix-logo.JPG" 
+             alt="Phoenix Logo" 
+             fill 
+             className="object-contain" 
+             priority
+           />
+        </div>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight drop-shadow-2xl">
+        <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight drop-shadow-2xl">
           MOSAAD <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
             PHOENIX BIKES
