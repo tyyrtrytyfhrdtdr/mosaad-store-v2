@@ -12,7 +12,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ar" dir="rtl">
-      <body className="bg-black text-white">{children}</body>
+      <body style={{ backgroundColor: 'black', color: 'white', margin: 0, padding: 0 }}>
+        {children}
+      </body>
     </html>
   );
 }
