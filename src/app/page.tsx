@@ -2,22 +2,27 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-black text-white">
+    <main className="min-h-screen flex flex-col bg-black text-white relative">
       
-      {/* المحتوى */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
-        
-        {/* اللوجو - صغرناه عشان ميبوظش الشكل */}
-        <div className="relative w-48 h-48 md:w-64 md:h-64 mb-8">
-           <Image 
-             src="/phoenix-logo.JPG" 
-             alt="Phoenix Logo" 
-             fill 
-             className="object-contain" 
-             priority
-           />
+      {/* النافبار (القائمة العلوية) */}
+      <nav className="w-full flex items-center justify-between p-6 border-b border-neutral-800 z-50 relative bg-black/50 backdrop-blur-md">
+        {/* اللوجو هنا في مكانه الصح بحجم صغير */}
+        <div className="relative w-16 h-16 md:w-20 md:h-20">
+          <Image 
+            src="/phoenix-logo.JPG" 
+            alt="Phoenix Logo" 
+            fill 
+            className="object-contain" 
+            priority
+          />
         </div>
+        <div className="text-xl font-bold text-red-600 tracking-widest hidden md:block">
+          MOSAAD
+        </div>
+      </nav>
 
+      {/* محتوى الصفحة الرئيسية */}
+      <div className="flex-1 flex flex-col items-center justify-center px-4 text-center z-10 relative">
         <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight drop-shadow-2xl">
           MOSAAD <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
@@ -39,7 +44,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 w-full text-center text-neutral-500 text-sm z-10">
+      <div className="w-full text-center text-neutral-500 text-sm p-6 border-t border-neutral-800 z-10 relative">
         &copy; 2024 MOSAAD Company - Official PHOENIX Importer in Egypt
       </div>
     </main>
