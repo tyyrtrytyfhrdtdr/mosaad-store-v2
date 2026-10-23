@@ -4,14 +4,15 @@ export default function Home() {
   return (
     <main className="min-h-screen relative flex flex-col bg-black text-white overflow-hidden">
       
-      {/* صورة الخلفية السينمائية */}
+      {/* صورة الخلفية السينمائية (دراجة في مكان مظلم) */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=2000&auto=format&fit=crop" 
+          src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?q=80&w=2000&auto=format&fit=crop" 
           alt="Background" 
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
+        {/* الطبقة السوداء الشفافة عشان الكلام يبان */}
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* النافبار */}
@@ -35,22 +36,22 @@ export default function Home() {
           <span className="text-red-600">PHOENIX BIKES</span>
         </h1>
         
-        <p className="text-lg md:text-xl text-neutral-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-2xl text-white mb-10 max-w-2xl mx-auto leading-relaxed font-light">
           أكبر مستورد للدراجات في مصر. الوكيل الرسمي لـ PHOENIX من الصين والهند. جودة عالمية وأسعار لا تقبل المنافسة.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="px-8 py-3 bg-red-600 text-white font-bold rounded-full hover:bg-red-700 transition">
-            تصفح الدراجات
+          <button className="px-8 py-4 bg-red-600 text-white font-bold rounded-full hover:bg-red-700 transition transform hover:scale-105 shadow-lg shadow-red-600/30">
+            تصفح الدراجات الآن
           </button>
-          <button className="px-8 py-3 bg-neutral-800 text-white font-bold rounded-full border border-neutral-700 hover:bg-neutral-700 transition">
-            قطع الغيار
+          <button className="px-8 py-4 bg-black/50 backdrop-blur-sm border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition">
+            قطع الغيار والاسكوترات
           </button>
         </div>
       </div>
 
       {/* الفوتر */}
-      <div className="relative z-10 w-full text-center text-neutral-500 text-sm p-6">
+      <div className="relative z-10 w-full text-center text-neutral-400 text-sm p-6">
         &copy; 2024 MOSAAD Company - Official PHOENIX Importer
       </div>
     </main>
