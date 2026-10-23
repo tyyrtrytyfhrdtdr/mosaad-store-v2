@@ -20,14 +20,14 @@ export default function Home() {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20 flex flex-col items-center">
         
         {/* اللوجو */}
-        <div className="w-48 h-48 relative mb-8 rounded-full overflow-hidden border-4 border-red-600 shadow-[0_0_30px_rgba(220,38,38,0.6)] bg-black">
-           <Image 
-             src="/phoenix-logo.JPG" 
-             alt="Phoenix Logo" 
-             fill 
-             className="object-contain p-2" 
-           />
-        </div>
+<div className="relative w-32 h-32 md:w-40 md:h-40 mb-8 rounded-full overflow-hidden border-4 border-red-600 shadow-[0_0_30px_rgba(220,38,38,0.6)] bg-black flex-shrink-0">
+   <Image 
+     src="/phoenix-logo.JPG" 
+     alt="Phoenix Logo" 
+     fill 
+     className="object-contain p-2" 
+   />
+</div>
 
         <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight drop-shadow-2xl">
           MOSAAD <br />
