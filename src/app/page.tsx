@@ -4,20 +4,31 @@ export default function Home() {
   return (
     <main className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden">
       
-      {/* صورة الخلفية السينمائية */}
+      {/* صورة الخلفية */}
       <div className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=2000&auto=format&fit=crop"
           alt="Cycling Background"
           fill
-          className="object-cover opacity-40"
+          className="object-cover opacity-30"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
       </div>
 
       {/* المحتوى */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20 flex flex-col items-center">
+        
+        {/* اللوجو */}
+        <div className="w-48 h-48 relative mb-8 rounded-full overflow-hidden border-4 border-red-600 shadow-[0_0_30px_rgba(220,38,38,0.6)] bg-black">
+           <Image 
+             src="/phoenix-logo.JPG" 
+             alt="Phoenix Logo" 
+             fill 
+             className="object-contain p-2" 
+           />
+        </div>
+
         <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight drop-shadow-2xl">
           MOSAAD <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
@@ -39,7 +50,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* تذييل بسيط */}
       <div className="absolute bottom-8 w-full text-center text-neutral-500 text-sm z-10">
         &copy; 2024 MOSAAD Company - Official PHOENIX Importer in Egypt
       </div>
